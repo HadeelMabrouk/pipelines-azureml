@@ -12,13 +12,13 @@ trigger:
 - master
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: ubuntu-latest
+strategy:
+  matrix:
+    Python36:
+      python.version: '3.6'
 
 steps:
-- task: UsePythonVersion@0
-  inputs:
-    versionSpec: '3.6'
-  displayName: 'Use Python 3.6'
 - task: AzureCLI@2
   displayName: 'Install AML CLI'
   inputs:
