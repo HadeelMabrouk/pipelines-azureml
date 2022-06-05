@@ -1,6 +1,6 @@
 name: diabetes-training-env
 dependencies:
-  - python=3.6.2
+  - python=3.10
   - pip=20.0
   - pip:
     - azureml-defaults
